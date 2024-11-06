@@ -1,4 +1,5 @@
 from pySMART import Device
+import subprocess
 
 
 class PySmartBasic:
@@ -22,7 +23,8 @@ class PySmartBasic:
 
     def get_attributes(self):
         """Get the attributes of the device."""
-        for attribute in self.device.attributes:
+        if not self.device.if_attributes: return
+        for attribute in self.device.if_attributes:
             print(f"{attribute.name}: {attribute.raw}")
 
     def get_attributes_value(self, attributes: list = None):
@@ -38,8 +40,14 @@ class PySmartBasic:
             for attribute in self.device.attributes:
                 if attribute.name in attributes:
                     print(f"{attribute.name}: {attribute.raw}")
+command = "sudo echo YOU NEED SUPERUSER PRIVILEGES"
 
+try:
+    # Prompt for sudo password and run command
+    subprocess.run(["sudo"] + command.split(), check=True)
+except subprocess.CalledProcessError as e:
+    print("An error occurred:", e)
 
-test_pysmart = PySmartBasic("/dev/nvme0")
+test_pysmart = PySmartBasic("nvme0")
 
 test_pysmart.get_attributes()
