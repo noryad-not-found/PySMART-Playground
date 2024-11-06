@@ -1,14 +1,14 @@
 # PySMART-Playground
+
 Basic PySMART learning project
 
 *"Where your hard drives spill their deepest, darkest secrets... so you can keep them running smoothly!"*
-
 
 This repository is a hands-on lab designed to help me learn, explore, and experiment with PySMART and S.M.A.R.T. data. Here, you’ll find examples, scripts, and projects that will make disk monitoring a breeze—and (maybe).
 
 ## What is PySMART?
 
-[PySMART](https://pypi.org/project/PySMART/) is a Python wrapper for Smartmontools, which lets you access your storage devices' S.M.A.R.T. (Self-Monitoring, Analysis, and Reporting Technology) data. S.M.A.R.T. data includes critical information about your hard drives, like temperature, reallocated sectors, and overall health status. Using PySMART, you can monitor these attributes, set up health alerts, and even schedule automatic tests to keep an eye on your drives.
+[PySMART](https://pypi.org/project/PySMART/) is a Python wrapper for Smartmontools, which lets you access your storage devices' S.M.A.R.T. (Self-Monitoring, Analysis, and Reporting Technology) data. S.M.A.R.T. dIata includes critical information about your hard drives, like temperature, reallocated sectors, and overall health status. Using PySMART, you can monitor these attributes, set up health alerts, and even schedule automatic tests to keep an eye on your drives.
 
 ## What's Inside
 
@@ -30,15 +30,18 @@ Me, but if you know even less, you can try it too.
 ## Getting Started
 
 ### Step 1: Install Smartmontools
+
 Smartmontools gives you access to low-level disk data. Here’s how to install it:
 
 - **Linux (Debian/Ubuntu)**:
+
   ```bash
   sudo apt update
   sudo apt install smartmontools
   ```
 
 - **macOS (Homebrew)**:
+
   ```bash
   brew install smartmontools
   ```
@@ -78,6 +81,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Smartmontools**: The backbone of this project, enabling low-level disk monitoring.
 - **PySMART**: Simplifying S.M.A.R.T. data access for Python developers.
 
---- 
+---
 
 Enjoy exploring and happy monitoring!
